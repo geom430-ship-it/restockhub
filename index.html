@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Restock Gift Cards — Accès Premium</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-mark">◆</span>
+      <span>Restock<span class="accent">Hub</span></span>
+    </div>
+    <div class="live-badge"><span class="pulse"></span> Live • Restock auto 60 min</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Cartes cadeaux en stock réel</h1>
+      <p class="sub">Sélectionne ta marque et le montant. Les codes sont régénérés automatiquement chaque heure. Aucune info personnelle requise.</p>
+    </section>
+
+    <!-- ÉTAPE A : choix marque -->
+    <section id="step-brand" class="card">
+      <div class="card-head">
+        <h2>1. Choisis ta carte cadeau</h2>
+        <span class="tag">12 marques</span>
+      </div>
+      <div class="brands-grid" id="brands"></div>
+    </section>
+
+    <!-- ÉTAPE B : montant -->
+    <section id="step-amount" class="card hidden">
+      <div class="card-head">
+        <button class="back" id="back-brand">← Retour</button>
+        <h2>2. Montant — <span id="selected-brand-name"></span></h2>
+      </div>
+      <div class="amounts" id="amounts"></div>
+    </section>
+
+    <!-- ÉTAPE C : restock + APK -->
+    <section id="step-result" class="card hidden">
+      <div class="card-head">
+        <button class="back" id="back-amount">← Retour</button>
+        <h2>3. Restock en cours</h2>
+      </div>
+
+      <div class="restock-box">
+        <div class="restock-top">
+          <div>
+            <div class="label">Prochain restock complet</div>
+            <div class="countdown" id="countdown">59:59</div>
+          </div>
+          <div class="stock-pill">Stock partiel • <span id="stock-count">7</span> codes</div>
+        </div>
+        <div class="progress"><div class="bar" id="progress-bar"></div></div>
+        <p class="hint">Les codes ci-dessous sont des aperçus limités. Installe l’app officielle pour débloquer la liste complète + notifications restock.</p>
+      </div>
+
+      <div class="codes-preview" id="codes-preview"></div>
+
+      <div class="apk-cta">
+        <div class="apk-info">
+          <div class="apk-icon">📱</div>
+          <div>
+            <strong>Générateur RestockHub</strong>
+            <div class="muted">Android • v2.4.1 • Mise à jour il y a 12 min</div>
+          </div>
+        </div>
+        <ul class="apk-perks">
+          <li>Liste complète des codes (Apple, Roblox, Netflix, Steam…)</li>
+          <li>Alerte auto à chaque restock (toutes les 60 min)</li>
+          <li>Aucun compte / aucune carte bancaire</li>
+        </ul>
+        <a id="download-apk" class="btn-download" href="app-release.apk" download>Télécharger l’application (.apk)</a>
+        <p class="tiny">Active « Sources inconnues » si Android le demande. App légère, sans pub.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>RestockHub © 2026</span>
+    <span>Service de distribution automatisée • Hors circuit retail</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
